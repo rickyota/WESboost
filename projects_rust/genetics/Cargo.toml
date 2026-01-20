@@ -1,0 +1,82 @@
+[package]
+name = "genetics"
+version = "0.1.0"
+authors = ["rickyota <22293266+rickyota@users.noreply.github.com>"]
+description = "General Genetics Crate"
+edition = "2021"
+
+[features]
+#default = ["plink2","pyo3"]
+default = ["plink2"]
+plink2 = ["dep:pgenlib"]
+pyo3 = ["dep:pyo3", "dep:numpy"]
+
+[dependencies]
+pgenlib = { package = "pgenlib_rust", path = "../../lib/pgenlib_rust", optional = true }
+#pgenlib = { package = "pgenlib_rust", path = "../../lib/pgenlib_regenie_rust", optional = true }
+zstd = { version = "0.12" }
+#zstd = { version = "0.12", optional = true }
+cmatrix = { path = "../cmatrix" }
+# TODO: now for pgs.rs only
+mysmartcore = { path = "../../lib/mysmartcore" }
+mylinfa = { package = "linfa", path = "../../lib/mylinfa" }
+mylinfa-logistic = { package = "linfa-logistic", path = "../../lib/mylinfa/algorithms/linfa-logistic" }
+# for pyo3
+numpy = { version = "0.17.2", optional = true }
+maligned = "0"
+sysinfo = "0"
+clap = { version = "4.3.4", features = ["derive"] }
+rayon = "1.5"
+ndarray = "0.15"
+log = "0.4"
+env_logger = "0.9"
+assert_float_eq = "1"
+csv = "1.1"
+serde = { version = "1", features = ["derive"] }
+rand = "0.8.5"
+indoc = "2"
+statrs = "0.18.0"
+rstat = "0.6.0"
+
+#crossbeam="0.8"
+#linfa="0.7.0"
+#linfa-logistic="0.7.0"
+#linfa = "0.6.1"
+#linfa-logistic = "0.6.1"
+#smartcore="0.3.2"
+#smartcore="0.2.0"
+#rand="0.8"
+#argmin="0.4"
+#nalgebra="0.31.4"
+
+
+[dependencies.pyo3]
+version = "0.17.3"
+optional = true
+# comment for static link
+features = ["auto-initialize"]
+
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "set_count"
+harness = false
+
+[[bench]]
+name = "set_bed"
+harness = false
+
+[[bench]]
+name = "pred_to_count"
+harness = false
+
+[[bench]]
+name = "load_plink"
+harness = false
+
+
+[[bench]]
+name = "load_plink_use_samples"
+harness = false

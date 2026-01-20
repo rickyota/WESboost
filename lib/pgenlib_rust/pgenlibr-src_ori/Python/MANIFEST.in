@@ -1,0 +1,2 @@
+include src/pgenlib/pgenlib.pyx
+graft src/plink2

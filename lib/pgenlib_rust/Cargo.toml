@@ -1,0 +1,23 @@
+[package]
+name = "pgenlib_rust"
+version = "0.1.0"
+authors = ["name"]
+edition = "2021"
+#build = "build.rs"
+#crate-type = ["staticlib"]
+
+[dependencies]
+cxx = "1.0.137"
+#cxx = "1.0.97"
+
+#cxx-build = "1.0.137"
+#cxx = "1.0"
+
+# for build.rs
+[build-dependencies]
+cxx-build = "1.0.137"
+walkdir = "2"
+
+#cxx-build = "1.0.97"
+#cxx-build = "1.0"
+#cxx-build = "1.0.137"
