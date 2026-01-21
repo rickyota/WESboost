@@ -46,7 +46,7 @@ $ wesboost train \
 
 ## <a name="introduction"></a>Introduction
 
-WESboost is a polygenic score method to capture rare variant effects. It is based on the GenoBoost framework, which uses gradient boosting machines to model complex genetic architectures. WESboost extends GenoBoost by incorporating functional annotations and optimizing for whole-exome sequencing (WES) data.
+WESBoost is a polygenic score method to capture rare variant effects. It is based on the GenoBoost framework, which uses gradient boosting machines to model complex genetic architectures. WESBoost extends GenoBoost by incorporating functional annotations and optimizing for whole-exome sequencing (WES) data.
 
 
 
